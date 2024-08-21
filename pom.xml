@@ -11,7 +11,7 @@
     <groupId>org.gorohoroh</groupId>
     <artifactId>event-registration</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>Event Registration</name>
+    <name>event-registration</name>
     <description>Event Registration</description>
     <url/>
     <licenses>
