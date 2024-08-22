@@ -6,7 +6,8 @@ services:
   postgres:
     image: postgres
     environment:
-      POSTGRES_USER: admin
+      POSTGRES_DB: eventsdb
+      POSTGRES_USER: secretuser
       POSTGRES_PASSWORD: verystrongpassword
     ports:
       - '5432:5432'
