@@ -11,3 +11,12 @@ services:
       POSTGRES_PASSWORD: verystrongpassword
     ports:
       - '5432:5432'
+  events:
+    image: event-registration:0.0.1-SNAPSHOT
+    depends_on:
+      - mongo
+      - postgres
+    environment:
+      - "SPRING_PROFILES_ACTIVE=docker"
+    ports:
+      - '8080:8080'
