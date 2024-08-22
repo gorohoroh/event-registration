@@ -2,8 +2,6 @@ package org.gorohoroh.eventregistration.events;
 
 import jakarta.persistence.*;
 
-import java.util.Objects;
-
 @Entity
 @Table(name = "organizers")
 public class Organizer {

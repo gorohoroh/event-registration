@@ -35,7 +35,7 @@ public class EventController {
     }
 
     @GetMapping(path = "/products")
-    public List<Product> getProductsByEventId(@RequestParam("eventId") int eventId) {
+    public List<Product> getProductsByEvent(@RequestParam("eventId") int eventId) {
         return productRepository.findByEventId(eventId);
     }
 }
