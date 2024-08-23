@@ -1,5 +1,7 @@
 package org.gorohoroh.eventregistration.events;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -7,6 +9,8 @@ import java.util.NoSuchElementException;
 
 @RestController
 public class EventController {
+
+    Logger logger = LoggerFactory.getLogger(EventController.class);
 
     private final OrganizerRepository organizerRepository;
     private final EventRepository eventRepository;
@@ -20,6 +24,11 @@ public class EventController {
 
     @RequestMapping(method = RequestMethod.GET, path = "/organizers")
     public List<Organizer> getOrganizers() {
+        logger.trace("A TRACE Message");
+        logger.debug("A DEBUG Message");
+        logger.info("An INFO Message");
+        logger.warn("A WARN Message");
+        logger.error("An ERROR Message");
         return organizerRepository.findAll();
     }
 
