@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: event-registration
+  datasource:
+    url: jdbc:postgresql://localhost:5432/eventsdb
+    username: secretuser
+    password: verystrongpassword
+  jpa:
+    hibernate:
+      ddl-auto: create
+    open-in-view: false
+    properties:
+      jakarta:
+        persistence:
+          schema-generation:
+            create-source: metadata
+            scripts:
+              action: create
+              create-target: newSchema.sql
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  sql:
+    init:
+      mode: never
